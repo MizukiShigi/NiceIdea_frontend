@@ -37,18 +37,22 @@ export default {
   },
   methods: {
     like() {
-      axios.get(`/api/idea/${this.idea.id}/like/`).then((response) => {
-        console.log(response);
-        this.idea.is_good = true;
-        this.idea.goods_count++;
-      });
+      axios
+        .get(`http://www.niceidea-backend.com/api/idea/${this.idea.id}/like/`)
+        .then((response) => {
+          console.log(response);
+          this.idea.is_good = true;
+          this.idea.goods_count++;
+        });
     },
     unlike() {
-      axios.get(`/api/idea/${this.idea.id}/unlike/`).then((response) => {
-        console.log(response);
-        this.idea.is_good = false;
-        this.idea.goods_count--;
-      });
+      axios
+        .get(`http://www.niceidea-backend.com/api/idea/${this.idea.id}/unlike/`)
+        .then((response) => {
+          console.log(response);
+          this.idea.is_good = false;
+          this.idea.goods_count--;
+        });
     },
   },
 };

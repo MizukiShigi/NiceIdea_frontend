@@ -64,7 +64,10 @@ export default {
       this.loading = true;
       console.log(this.params.user);
       axios
-        .post("/user/register/", this.params.user)
+        .post(
+          "http://www.niceidea-backend.com/user/register/",
+          this.params.user
+        )
         .then((res) => {
           console.log(res);
           this.formReset();

@@ -78,13 +78,15 @@ export default {
         content: this.content,
         title: this.title,
       };
-      axios.post("/api/ideas/", datas).then((response) => {
-        console.log(response.data);
-        this.$router.go({
-          path: this.$router.currentRoute.path,
-          force: true,
+      axios
+        .post("http://www.niceidea-backend.com/api/ideas/", datas)
+        .then((response) => {
+          console.log(response.data);
+          this.$router.go({
+            path: this.$router.currentRoute.path,
+            force: true,
+          });
         });
-      });
     },
   },
 };

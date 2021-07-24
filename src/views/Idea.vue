@@ -76,7 +76,7 @@ export default {
     },
     getIdeaData() {
       axios
-        .get(`/api/ideas/${this.id}/`)
+        .get(`http://www.niceidea-backend.com/api/ideas/${this.id}/`)
         .then((response) => (this.idea = response.data))
         .then(() => this.setPageTitle(this.idea.title));
     },

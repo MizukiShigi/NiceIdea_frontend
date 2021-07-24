@@ -56,13 +56,15 @@ export default {
       const datas = {
         comment: this.comment,
       };
-      axios.post(`/api/comments/${this.id}/`, datas).then((response) => {
-        console.log(response.data);
-        this.$router.go({
-          path: this.$router.currentRoute.path,
-          force: true,
+      axios
+        .post(`http://www.niceidea-backend.com/api/comments/${this.id}/`, datas)
+        .then((response) => {
+          console.log(response.data);
+          this.$router.go({
+            path: this.$router.currentRoute.path,
+            force: true,
+          });
         });
-      });
     },
   },
 };

@@ -60,7 +60,7 @@ export default {
       this.loading = true;
       const isToken = localStorage.getItem("token");
       axios
-        .post("/auth/", this.params.user)
+        .post("http://www.niceidea-backend.com/auth/", this.params.user)
         .then((res) => {
           if (isToken) {
             localStorage.removeItem("token");

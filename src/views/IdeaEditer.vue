@@ -51,7 +51,7 @@ export default {
       };
       if (this.id !== undefined) {
         axios
-          .put(`/api/ideas/${this.id}/`, datas, {
+          .put(`http://www.niceidea-backend.com/api/ideas/${this.id}/`, datas, {
             headers: {
               Authorization: "JWT " + localStorage.getItem("token"),
             },
@@ -77,7 +77,7 @@ export default {
           });
       } else {
         axios
-          .post("/api/ideas/", datas, {
+          .post("http://www.niceidea-backend.com/api/ideas/", datas, {
             headers: {
               Authorization: "JWT " + localStorage.getItem("token"),
             },
@@ -108,7 +108,7 @@ export default {
     if (to.params.id !== undefined) {
       console.log(to);
       console.log(to.params);
-      const endpoint = `/api/ideas/${to.params.id}/`;
+      const endpoint = `http://www.niceidea-backend.com/api/ideas/${to.params.id}/`;
       const response = await axios
         .get(endpoint, {
           headers: { Authorization: "JWT " + localStorage.getItem("token") },

@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       title: "Idea Ranking",
-      requestUrl: "/api/ranking/",
+      requestUrl: "http://www.niceidea-backend.com/api/ranking/",
       icon: "mdi-medal-outline",
     };
   },

@@ -57,7 +57,10 @@ export default {
         comment: this.comment,
       };
       axios
-        .post(`http://www.niceidea-backend.com/api/comments/${this.id}/`, datas)
+        .post(
+          `https://www.niceidea-backend.com/api/comments/${this.id}/`,
+          datas
+        )
         .then((response) => {
           console.log(response.data);
           this.$router.go({

@@ -71,18 +71,15 @@ export default {
     this.checkLoggedIn();
   },
   methods: {
-    setPageTitle(title) {
-      document.title = title;
-    },
     getIdeaData() {
       axios
-        .get(`http://www.niceidea-backend.com/api/ideas/${this.id}/`)
-        .then((response) => (this.idea = response.data))
-        .then(() => this.setPageTitle(this.idea.title));
+        .get(`https://www.niceidea-backend.com/api/ideas/${this.id}/`)
+        .then((response) => (this.idea = response.data));
     },
   },
   created() {
     this.getIdeaData();
+    document.title = "NiceIdea";
   },
 };
 </script>

@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       title: "Idea Board",
-      requestUrl: "http://www.niceidea-backend.com/api/ideas/",
+      requestUrl: "https://www.niceidea-backend.com/api/ideas/",
       icon: "mdi-head-lightbulb-outline",
     };
   },

@@ -65,7 +65,7 @@ export default {
       console.log(this.params.user);
       axios
         .post(
-          "http://www.niceidea-backend.com/user/register/",
+          "https://www.niceidea-backend.com/user/register/",
           this.params.user
         )
         .then((res) => {
@@ -99,6 +99,9 @@ export default {
       this.$refs.form.reset();
       this.params = { user: { username: "", email: "", password: "" } };
     },
+  },
+  created() {
+    document.title = "NiceIdea";
   },
 };
 </script>

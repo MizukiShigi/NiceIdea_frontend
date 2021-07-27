@@ -79,7 +79,7 @@ export default {
         title: this.title,
       };
       axios
-        .post("http://www.niceidea-backend.com/api/ideas/", datas)
+        .post("https://www.niceidea-backend.com/api/ideas/", datas)
         .then((response) => {
           console.log(response.data);
           this.$router.go({

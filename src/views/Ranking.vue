@@ -28,12 +28,12 @@ export default {
   data() {
     return {
       title: "Idea Ranking",
-      requestUrl: "http://www.niceidea-backend.com/api/ranking/",
+      requestUrl: "https://www.niceidea-backend.com/api/ranking/",
       icon: "mdi-medal-outline",
     };
   },
   created() {
-    document.title = "NiceIdea Ranking";
+    document.title = "NiceIdea";
   },
 };
 </script>

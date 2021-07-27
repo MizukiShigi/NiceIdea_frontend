@@ -51,11 +51,15 @@ export default {
       };
       if (this.id !== undefined) {
         axios
-          .put(`http://www.niceidea-backend.com/api/ideas/${this.id}/`, datas, {
-            headers: {
-              Authorization: "JWT " + localStorage.getItem("token"),
-            },
-          })
+          .put(
+            `https://www.niceidea-backend.com/api/ideas/${this.id}/`,
+            datas,
+            {
+              headers: {
+                Authorization: "JWT " + localStorage.getItem("token"),
+              },
+            }
+          )
           .then((response) => {
             console.log(response.data);
             this.$router.push({
@@ -77,7 +81,7 @@ export default {
           });
       } else {
         axios
-          .post("http://www.niceidea-backend.com/api/ideas/", datas, {
+          .post("https://www.niceidea-backend.com/api/ideas/", datas, {
             headers: {
               Authorization: "JWT " + localStorage.getItem("token"),
             },
@@ -108,7 +112,7 @@ export default {
     if (to.params.id !== undefined) {
       console.log(to);
       console.log(to.params);
-      const endpoint = `http://www.niceidea-backend.com/api/ideas/${to.params.id}/`;
+      const endpoint = `https://www.niceidea-backend.com/api/ideas/${to.params.id}/`;
       const response = await axios
         .get(endpoint, {
           headers: { Authorization: "JWT " + localStorage.getItem("token") },
@@ -134,7 +138,7 @@ export default {
     }
   },
   created() {
-    document.title = "Editer idea";
+    document.title = "NiceIdea";
   },
 };
 </script>

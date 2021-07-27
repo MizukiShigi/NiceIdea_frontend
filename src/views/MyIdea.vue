@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       title: "My Idea",
-      requestUrl: "http://www.niceidea-backend.com/api/myideas/",
+      requestUrl: "https://www.niceidea-backend.com/api/myideas/",
       icon: "mdi-alpha-m-circle-outline",
     };
   },

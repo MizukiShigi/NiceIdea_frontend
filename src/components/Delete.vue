@@ -21,7 +21,7 @@ export default {
   methods: {
     deleteIdea() {
       axios
-        .delete(`http://www.niceidea-backend.com/api/ideas/${this.id}/`)
+        .delete(`https://www.niceidea-backend.com/api/ideas/${this.id}/`)
         .then((response) => {
           console.log(response);
           this.$router.push("/");

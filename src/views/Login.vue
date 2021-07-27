@@ -60,7 +60,7 @@ export default {
       this.loading = true;
       const isToken = localStorage.getItem("token");
       axios
-        .post("http://www.niceidea-backend.com/auth/", this.params.user)
+        .post("https://www.niceidea-backend.com/auth/", this.params.user)
         .then((res) => {
           if (isToken) {
             localStorage.removeItem("token");
@@ -87,6 +87,9 @@ export default {
       this.$refs.form.reset();
       this.params = { user: { email: "", password: "" } };
     },
+  },
+  created() {
+    document.title = "NiceIdea";
   },
 };
 </script>

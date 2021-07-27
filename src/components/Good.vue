@@ -38,7 +38,7 @@ export default {
   methods: {
     like() {
       axios
-        .get(`http://www.niceidea-backend.com/api/idea/${this.idea.id}/like/`)
+        .get(`https://www.niceidea-backend.com/api/idea/${this.idea.id}/like/`)
         .then((response) => {
           console.log(response);
           this.idea.is_good = true;
@@ -47,7 +47,9 @@ export default {
     },
     unlike() {
       axios
-        .get(`http://www.niceidea-backend.com/api/idea/${this.idea.id}/unlike/`)
+        .get(
+          `https://www.niceidea-backend.com/api/idea/${this.idea.id}/unlike/`
+        )
         .then((response) => {
           console.log(response);
           this.idea.is_good = false;

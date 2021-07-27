@@ -50,7 +50,7 @@ export default VueAxiosPlugin.install = function (Vue, { axios }) {
                         timer: 2000,
                     });
                     localStorage.removeItem('token')
-                    window.location.href = ("http://127.0.0.1:8000/login");
+                    window.location.href = ("https://www.niceidea.link/login");
                     break;
                 case 404:
                     Swal.fire({

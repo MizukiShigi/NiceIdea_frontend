@@ -25,9 +25,12 @@
                 ログイン
               </v-btn>
             </v-form>
-          </v-card-text> </v-card
-        ><v-flex xs12 sm6 md2 my-2 offset-xs6>
-          <v-spacer></v-spacer>
+          </v-card-text>
+        </v-card>
+        <v-flex justify="space-around">
+          <v-btn color="success" class="white--text" @click="guestSignin"
+            >ゲストログイン</v-btn
+          >
           <v-btn class="success--text" to="/register">新規登録はこちら</v-btn>
         </v-flex>
       </v-flex>
@@ -81,6 +84,24 @@ export default {
             showCloseButton: false,
             timer: 3000,
           });
+        });
+    },
+    guestSignin() {
+      this.loading = true;
+      const isToken = localStorage.getItem("token");
+      axios
+        .post("https://www.niceidea-backend.com/auth/", {
+          email: "guest@guest.jp",
+          password: "guestpass",
+        })
+        .then((res) => {
+          if (isToken) {
+            localStorage.removeItem("token");
+          }
+          localStorage.setItem("token", res.data.token);
+          this.formReset();
+          this.loading = false;
+          this.$router.push("/");
         });
     },
     formReset() {

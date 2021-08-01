@@ -22,6 +22,7 @@ NiceIdea アイデア投稿、共有アプリ
 * Python
 * DjangoRsetFramework
 * Vue.js
+* PostgreSQL
 * AWS(EC2, ELB, CloudFront, S3)
 * Docker
 * Nginx

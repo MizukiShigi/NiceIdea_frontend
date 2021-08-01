@@ -20,7 +20,7 @@ NiceIdea アイデア投稿、共有アプリ
 
 # 技術
 * Python
-* Django
+* DjangoRsetFramework
 * Vue.js
 * AWS(EC2, ELB, CloudFront, S3)
 * Docker
